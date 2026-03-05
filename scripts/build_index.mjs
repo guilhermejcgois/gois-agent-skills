@@ -28,14 +28,17 @@ const skills = skillFiles.map((file) => {
     path: rel,
     files: {
       meta: `${rel}/skill.yaml`,
-      doc: `${rel}/skill.md`
-    }
+      doc: `${rel}/skill.md`,
+    },
   };
 });
 
 skills.sort((a, b) => a.id.localeCompare(b.id));
 
-fs.writeFileSync(path.join(indexDir, "skills.json"), JSON.stringify(skills, null, 2));
+fs.writeFileSync(
+  path.join(indexDir, "skills.json"),
+  JSON.stringify(skills, null, 2),
+);
 
 const byCategory = skills.reduce((acc, s) => {
   acc[s.category] ??= [];

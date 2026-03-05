@@ -1,6 +1,7 @@
 # API Contract (BFF/Backend)
 
 ## Quando usar
+
 - Antes de construir front/back em paralelo.
 - Quando você quer reduzir “vai e volta” de integração.
 

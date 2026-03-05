@@ -1,6 +1,6 @@
 # Skills Catalog
 
-Gerado automaticamente. Total: **6**.
+Gerado automaticamente. Total: **7**.
 
 ## fullstack
 
@@ -33,4 +33,9 @@ Gerado automaticamente. Total: **6**.
   Revisar PR fullstack com checklist de qualidade, segurança, DX e testes.
   `code-review` `quality` `security` `performance`
   📄 skills/fullstack/pr-review-fullstack/skill.md
+
+- **Use GitHub Spec Kit (SDD Workflow)** — `fullstack.use-spec-kit-sdd` (v1.0.0)  
+  Guiar o ciclo Spec-Driven (spec → build → validate → iterate) usando GitHub Spec Kit dentro do repo.
+  `sdd` `spec-kit` `spec-driven-development` `copilot` `workflow`
+  📄 skills/fullstack/use-spec-kit-sdd/skill.md
 

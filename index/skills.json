@@ -243,5 +243,58 @@
       "meta": "skills/fullstack/pr-review-fullstack/skill.yaml",
       "doc": "skills/fullstack/pr-review-fullstack/skill.md"
     }
+  },
+  {
+    "id": "fullstack.use-spec-kit-sdd",
+    "name": "Use GitHub Spec Kit (SDD Workflow)",
+    "version": "1.0.0",
+    "category": "fullstack",
+    "tags": [
+      "sdd",
+      "spec-kit",
+      "spec-driven-development",
+      "copilot",
+      "workflow"
+    ],
+    "objective": "Guiar o ciclo Spec-Driven (spec → build → validate → iterate) usando GitHub Spec Kit dentro do repo.",
+    "inputs": {
+      "required": [
+        "feature_goal",
+        "repo_context"
+      ],
+      "optional": [
+        "architecture_constraints",
+        "tech_stack",
+        "acceptance_criteria",
+        "non_functional_requirements"
+      ]
+    },
+    "outputs": [
+      "spec_artifacts",
+      "implementation_plan",
+      "validation_checklist"
+    ],
+    "constraints": [
+      "Não pular para código sem antes fechar o spec (escopo, ACs, bordas, erros).",
+      "Não inventar requisitos; listar suposições explicitamente.",
+      "Tratar spec como source of truth: mudanças viram atualização do spec antes do código."
+    ],
+    "tools": [
+      "spec-kit"
+    ],
+    "quality_bar": [
+      "Spec tem objetivo, escopo, não-escopo, ACs, casos de erro e exemplos",
+      "Plano de implementação fatiado (PRs pequenos)",
+      "Checklist de validação cobrindo unit + integration + e2e quando fizer sentido"
+    ],
+    "examples": {
+      "input": "examples/input.md",
+      "output": "examples/output.md"
+    },
+    "path": "skills/fullstack/use-spec-kit-sdd",
+    "files": {
+      "meta": "skills/fullstack/use-spec-kit-sdd/skill.yaml",
+      "doc": "skills/fullstack/use-spec-kit-sdd/skill.md"
+    }
   }
 ]

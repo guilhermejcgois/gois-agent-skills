@@ -26,5 +26,5 @@ Tarefas:
 3. Sugira mitigação segura (feature flag, rollback, rate limit, cache, etc).
 
 4. Sugira correção definitiva e como validar.
-Formato: tabela + checklist.
+   Formato: tabela + checklist.
 ```

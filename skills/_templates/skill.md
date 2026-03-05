@@ -1,15 +1,19 @@
 # {Skill Name}
 
 ## Quando usar
+
 - ...
 
 ## Quando não usar
+
 - ...
 
 ## Entradas esperadas
+
 - ...
 
 ## Procedimento (Copy/Paste)
+
 Cole isso no seu agente/ChatGPT:
 
 Você é um assistente técnico fullstack.
@@ -19,8 +23,10 @@ Restrições: ...
 Entregáveis: ...
 
 ## Saídas esperadas
+
 - ...
 
 ## Exemplos
+
 - `examples/input.md`
 - `examples/output.md`

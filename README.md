@@ -3,6 +3,7 @@
 Um repositório de **skills reutilizáveis** para agentes/assistentes (humanos ou LLMs) com foco em **fullstack**: planejamento, contrato de API, migração de banco, debug e code review.
 
 A ideia é simples:
+
 - **tarefa recorrente** vira **skill versionada**
 - cada skill tem **metadados**, **guia de uso (copy/paste)** e **exemplos**
 - o repo gera um **catálogo** e valida tudo no CI
@@ -11,15 +12,17 @@ A ideia é simples:
 
 ## Como usar em 60 segundos
 
-1) Abra o catálogo:
+1. Abra o catálogo:
+
 - `index/SKILLS.md`
 
-2) Escolha uma skill (ex.: `fullstack.plan-feature`)
+2. Escolha uma skill (ex.: `fullstack.plan-feature`)
 
-3) Abra a doc e copie o bloco **"Procedimento (Copy/Paste)"**
+3. Abra a doc e copie o bloco **"Procedimento (Copy/Paste)"**
+
 - `skills/fullstack/plan-feature/skill.md`
 
-4) Cole no seu ChatGPT / agente e preencha os placeholders `{{...}}`.
+4. Cole no seu ChatGPT / agente e preencha os placeholders `{{...}}`.
 
 Pronto. Se você melhorar o procedimento, abre PR e a skill evolui sem virar bagunça.
 
@@ -43,7 +46,6 @@ examples/
 input.md
 output.md
 ```
-
 
 ---
 
@@ -73,16 +75,19 @@ output.md
 ## Padrões e convenções
 
 ### IDs
+
 - **Imutáveis** e únicos.
 - Recomenda-se: `categoria.slug`
   - Ex.: `fullstack.plan-feature`
 
 ### Versionamento (semver)
+
 - `MAJOR` → mudou comportamento de forma “quebra uso”
 - `MINOR` → adicionou melhorias mantendo compatibilidade
 - `PATCH` → ajustes pequenos / correções / exemplos
 
 ### Quality Bar (obrigatório)
+
 Toda skill deve ter um `quality_bar` no `skill.yaml`.
 Isso define o “mínimo aceitável” da saída.
 
@@ -91,6 +96,7 @@ Isso define o “mínimo aceitável” da saída.
 ## Comandos úteis
 
 ### Validar skills
+
 Valida todos os `skill.yaml` contra o schema:
 
 ```bash
@@ -98,6 +104,7 @@ npm run validate
 ```
 
 ### Gerar catálogo
+
 Gera index/skills.json e index/SKILLS.md:
 
 ```bash
@@ -109,31 +116,43 @@ npm run index
 ```markdown
 npm run format
 ```
+
 ## Como criar uma skill nova (workflow recomendado)
 
 1. Copie o template:
-  - `skills/_templates/skill.yaml`
-  - `skills/_templates/skill.md`
+
+- `skills/_templates/skill.yaml`
+- `skills/_templates/skill.md`
+
 2. Crie a pasta:
-  - `skills/fullstack/<nome-da-skill>/`
+
+- `skills/fullstack/<nome-da-skill>/`
+
 3. Preencha:
-  - `skill.yaml` com id, versão, inputs/outputs, tags, quality bar
-  - `skill.md` com “Quando usar”, “Quando não usar” e “Copy/Paste”
-  - `examples/input.md` e `examples/output.md`
+
+- `skill.yaml` com id, versão, inputs/outputs, tags, quality bar
+- `skill.md` com “Quando usar”, “Quando não usar” e “Copy/Paste”
+- `examples/input.md` e `examples/output.md`
+
 4. Rode:
+
 ```bash
 npm run validate
 npm run index
 ```
+
 5. Abra PR.
 
 ## Como usar no dia a dia em projetos pessoais
 
 ### Opção A — Copy/Paste direto (zero setup)
+
 Você usa o catálogo e cola o bloco “Copy/Paste” no chat/agente.
 
 ### Opção B — Acoplar no projeto com lock (repetível e versionado)
+
 Em cada projeto pessoal, crie:
+
 ```
 my-project/
   .agent/
@@ -151,10 +170,12 @@ skills:
 ```
 
 Isso te dá:
+
 - rastreabilidade de quais skills você usou
 - fácil de repetir o fluxo em outros projetos
 
 ### Opção C — Importar como subtree (quando ficar sério)
+
 Quando você quiser “travar” skills dentro do projeto e atualizar quando quiser, use git subtree pra trazer skills/ pra dentro do projeto (ex.: em /.skills/).
 
 ## Packs
@@ -162,9 +183,11 @@ Quando você quiser “travar” skills dentro do projeto e atualizar quando qui
 Packs são “listas de skills” por finalidade.
 
 Exemplo:
+
 - `packs/fullstack.yaml` → pack fullstack
 
 Útil pra:
+
 - começar rápido em um projeto novo
 - documentar “kit padrão” que você usa sempre
 
@@ -178,4 +201,3 @@ Exemplo:
 ## Contribuindo
 
 Veja `CONTRIBUTING.md` para padrões de PR, versionamento e checklist de qualidade.
-
