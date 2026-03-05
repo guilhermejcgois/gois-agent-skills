@@ -1,0 +1,32 @@
+id: presentation-deck.marp-corporate
+name: Presentation Deck (Marp) — Corporate/PPTX
+version: 1.0.0
+category: presentation-deck
+tags: [marp, markdown, pptx, pdf, corporate, template]
+objective: "Criar apresentação objetiva e 'corporate-friendly' em Markdown com export para PPTX/PDF/HTML via Marp CLI."
+inputs:
+  required:
+    - talk_goal
+    - audience
+    - duration_minutes
+    - outline_topics
+  optional:
+    - brand_guidelines
+    - constraints
+    - references
+outputs:
+  - slides_md
+  - export_commands
+  - speaker_notes
+constraints:
+  - "Manter 1 ideia por slide; evitar parede de texto."
+  - "Não inventar dados; sinalizar suposições."
+tools:
+  - marp-cli
+quality_bar:
+  - "Agenda + fechamento com CTA"
+  - "Mensagens curtas e escaneáveis"
+  - "Export reproduzível (comando/CI)"
+examples:
+  input: "examples/input.md"
+  output: "examples/output.md"

@@ -1,0 +1,27 @@
+id: presentation-deck.quarto-docs-to-slides
+name: Presentation Deck (Quarto) — Docs ↔ Slides
+version: 1.0.0
+category: presentation-deck
+tags: [quarto, revealjs, documentation, publish, reproducible]
+objective: "Criar apresentação em Quarto que também serve como documentação publicável do projeto."
+inputs:
+  required:
+    - talk_goal
+    - audience
+    - outline_topics
+  optional:
+    - code_examples
+    - figures
+    - references
+outputs:
+  - slides_qmd
+  - publish_notes
+  - structure_plan
+constraints:
+  - "Priorizar reprodutibilidade e clareza: links e referências organizadas."
+tools:
+  - quarto
+quality_bar:
+  - "Conteúdo reaproveitável como doc"
+  - "Seções bem estruturadas"
+  - "Checklist de publicação/export"

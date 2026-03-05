@@ -1,0 +1,25 @@
+id: presentation-deck.typst-polylux-pdf-premium
+name: Presentation Deck (Typst/Polylux) — PDF Premium
+version: 1.0.0
+category: presentation-deck
+tags: [typst, polylux, pdf, typography, design-system]
+objective: "Criar deck PDF com estética premium e consistência visual usando Typst + Polylux."
+inputs:
+  required:
+    - talk_goal
+    - audience
+    - outline_topics
+  optional:
+    - brand_guidelines
+    - visual_style
+outputs:
+  - slides_typ
+  - build_commands
+constraints:
+  - "Foco em visual limpo e legibilidade (PDF)."
+tools:
+  - typst
+quality_bar:
+  - "Hierarquia visual forte"
+  - "Pouco texto por slide"
+  - "Build reproduzível"

@@ -1,0 +1,28 @@
+id: presentation-deck.slidev-devtalk
+name: Presentation Deck (Slidev) — Dev Talk/Demo
+version: 1.0.0
+category: presentation-deck
+tags: [slidev, devtalk, demo, mermaid, code, interactive]
+objective: "Criar deck técnico em Slidev com narrativa, snippets, Mermaid e plano de demo."
+inputs:
+  required:
+    - talk_goal
+    - audience
+    - duration_minutes
+    - key_takeaways
+  optional:
+    - repo_links
+    - demo_steps
+    - constraints
+outputs:
+  - slides_md
+  - demo_plan
+  - run_commands
+constraints:
+  - "Evitar 20 slides de código: preferir foco + highlights."
+tools:
+  - slidev
+quality_bar:
+  - "Story arc: problema → solução → como → trade-offs → takeaways"
+  - "Demo plan executável"
+  - "Slides com ritmo (texto curto, visuais/diagramas quando necessário)"
