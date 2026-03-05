@@ -1,0 +1,247 @@
+[
+  {
+    "id": "fullstack.api-contract",
+    "name": "API Contract (BFF/Backend)",
+    "version": "1.0.0",
+    "category": "fullstack",
+    "tags": [
+      "api",
+      "openapi",
+      "bff",
+      "types"
+    ],
+    "objective": "Definir contrato de API consistente (rotas, DTOs, erros, paginação) e pronto pra front consumir.",
+    "inputs": {
+      "required": [
+        "use_cases"
+      ],
+      "optional": [
+        "auth_model",
+        "conventions"
+      ]
+    },
+    "outputs": [
+      "endpoint_spec",
+      "dto_schema",
+      "error_model"
+    ],
+    "constraints": [
+      "Evitar overengineering: prefira contrato simples e evolutivo."
+    ],
+    "quality_bar": [
+      "Padroniza erros",
+      "Define paginação/filtros",
+      "DTOs consistentes"
+    ],
+    "path": "skills/fullstack/api-contract",
+    "files": {
+      "meta": "skills/fullstack/api-contract/skill.yaml",
+      "doc": "skills/fullstack/api-contract/skill.md"
+    }
+  },
+  {
+    "id": "fullstack.db-migration-plan",
+    "name": "DB Migration Plan",
+    "version": "1.0.0",
+    "category": "fullstack",
+    "tags": [
+      "database",
+      "migration",
+      "postgres",
+      "safety"
+    ],
+    "objective": "Planejar migrations seguras (up/down), rollout, backfill e estratégia de compatibilidade.",
+    "inputs": {
+      "required": [
+        "change_description"
+      ],
+      "optional": [
+        "db_engine",
+        "deployment_model"
+      ]
+    },
+    "outputs": [
+      "migration_steps",
+      "rollout_plan",
+      "rollback_plan"
+    ],
+    "constraints": [
+      "Não sugerir mudanças destrutivas sem plano de rollback."
+    ],
+    "quality_bar": [
+      "Inclui compatibilidade (expand/contract)",
+      "Considera backfill e locks",
+      "Rollback plausível"
+    ],
+    "path": "skills/fullstack/db-migration-plan",
+    "files": {
+      "meta": "skills/fullstack/db-migration-plan/skill.yaml",
+      "doc": "skills/fullstack/db-migration-plan/skill.md"
+    }
+  },
+  {
+    "id": "fullstack.debug-production",
+    "name": "Debug Production (Hypothesis-driven)",
+    "version": "1.0.0",
+    "category": "fullstack",
+    "tags": [
+      "debug",
+      "incident",
+      "logs",
+      "metrics"
+    ],
+    "objective": "Investigar problema em prod com hipóteses, evidências e próximos passos seguros.",
+    "inputs": {
+      "required": [
+        "symptoms"
+      ],
+      "optional": [
+        "logs",
+        "metrics",
+        "recent_changes"
+      ]
+    },
+    "outputs": [
+      "hypotheses",
+      "evidence_needed",
+      "next_actions"
+    ],
+    "constraints": [
+      "Priorize mitigação segura antes de correção definitiva."
+    ],
+    "quality_bar": [
+      "Hipóteses priorizadas",
+      "Pede evidências específicas",
+      "Plano de mitigação"
+    ],
+    "path": "skills/fullstack/debug-production",
+    "files": {
+      "meta": "skills/fullstack/debug-production/skill.yaml",
+      "doc": "skills/fullstack/debug-production/skill.md"
+    }
+  },
+  {
+    "id": "fullstack.example",
+    "name": "Example Skill",
+    "version": "0.1.0",
+    "category": "fullstack",
+    "tags": [
+      "example"
+    ],
+    "objective": "Descreva em 1 frase o que essa skill resolve.",
+    "inputs": {
+      "required": [
+        "o que precisa existir pra rodar"
+      ],
+      "optional": [
+        "o que ajuda mas não é obrigatório"
+      ]
+    },
+    "outputs": [
+      "o que a skill entrega"
+    ],
+    "constraints": [
+      "o que não fazer"
+    ],
+    "tools": [
+      "web"
+    ],
+    "quality_bar": [
+      "check de qualidade"
+    ],
+    "examples": {
+      "input": "examples/input.md",
+      "output": "examples/output.md"
+    },
+    "path": "skills/_templates",
+    "files": {
+      "meta": "skills/_templates/skill.yaml",
+      "doc": "skills/_templates/skill.md"
+    }
+  },
+  {
+    "id": "fullstack.plan-feature",
+    "name": "Plan Feature (Fullstack)",
+    "version": "1.0.0",
+    "category": "fullstack",
+    "tags": [
+      "planning",
+      "architecture",
+      "scope",
+      "mvp"
+    ],
+    "objective": "Transformar uma ideia em plano de execução fullstack com etapas, riscos e entregáveis.",
+    "inputs": {
+      "required": [
+        "feature_goal",
+        "constraints"
+      ],
+      "optional": [
+        "current_stack",
+        "non_functional_requirements"
+      ]
+    },
+    "outputs": [
+      "plan",
+      "milestones",
+      "risks"
+    ],
+    "constraints": [
+      "Não inventar requisitos não mencionados; liste suposições."
+    ],
+    "quality_bar": [
+      "Plano em etapas pequenas e executáveis",
+      "Lista riscos e mitigação",
+      "Define o que é 'done'"
+    ],
+    "examples": {
+      "input": "examples/input.md",
+      "output": "examples/output.md"
+    },
+    "path": "skills/fullstack/plan-feature",
+    "files": {
+      "meta": "skills/fullstack/plan-feature/skill.yaml",
+      "doc": "skills/fullstack/plan-feature/skill.md"
+    }
+  },
+  {
+    "id": "fullstack.pr-review-fullstack",
+    "name": "PR Review (Fullstack)",
+    "version": "1.0.0",
+    "category": "fullstack",
+    "tags": [
+      "code-review",
+      "quality",
+      "security",
+      "performance"
+    ],
+    "objective": "Revisar PR fullstack com checklist de qualidade, segurança, DX e testes.",
+    "inputs": {
+      "required": [
+        "pr_diff"
+      ],
+      "optional": [
+        "context",
+        "standards"
+      ]
+    },
+    "outputs": [
+      "review_comments",
+      "risk_assessment",
+      "suggested_tests"
+    ],
+    "constraints": [
+      "Evitar nitpick: foque no que muda comportamento, risco e manutenção."
+    ],
+    "quality_bar": [
+      "Aponta riscos com severidade",
+      "Sugere testes específicos",
+      "Checa padrões de erro/observabilidade"
+    ],
+    "path": "skills/fullstack/pr-review-fullstack",
+    "files": {
+      "meta": "skills/fullstack/pr-review-fullstack/skill.yaml",
+      "doc": "skills/fullstack/pr-review-fullstack/skill.md"
+    }
+  }
+]

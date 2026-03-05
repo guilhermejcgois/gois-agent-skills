@@ -1,0 +1,8 @@
+name: Fullstack Pack
+version: 0.1.0
+skills:
+  - fullstack.plan-feature
+  - fullstack.api-contract
+  - fullstack.db-migration-plan
+  - fullstack.debug-production
+  - fullstack.pr-review-fullstack

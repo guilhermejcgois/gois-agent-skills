@@ -1,0 +1,22 @@
+id: fullstack.api-contract
+name: API Contract (BFF/Backend)
+version: 1.0.0
+category: fullstack
+tags: [api, openapi, bff, types]
+objective: "Definir contrato de API consistente (rotas, DTOs, erros, paginação) e pronto pra front consumir."
+inputs:
+  required:
+    - use_cases
+  optional:
+    - auth_model
+    - conventions
+outputs:
+  - endpoint_spec
+  - dto_schema
+  - error_model
+constraints:
+  - "Evitar overengineering: prefira contrato simples e evolutivo."
+quality_bar:
+  - "Padroniza erros"
+  - "Define paginação/filtros"
+  - "DTOs consistentes"

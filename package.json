@@ -1,0 +1,21 @@
+{
+  "name": "gois-agent-skills",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "validate": "node scripts/validate_skills.mjs",
+    "index": "node scripts/build_index.mjs",
+    "format": "prettier -w ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "ajv": "^8.18.0",
+    "ajv-formats": "^3.0.1",
+    "prettier": "^3.8.1",
+    "yaml": "^2.8.2"
+  }
+}

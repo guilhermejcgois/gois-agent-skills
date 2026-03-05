@@ -1,0 +1,23 @@
+id: fullstack.debug-production
+name: Debug Production (Hypothesis-driven)
+version: 1.0.0
+category: fullstack
+tags: [debug, incident, logs, metrics]
+objective: "Investigar problema em prod com hipóteses, evidências e próximos passos seguros."
+inputs:
+  required:
+    - symptoms
+  optional:
+    - logs
+    - metrics
+    - recent_changes
+outputs:
+  - hypotheses
+  - evidence_needed
+  - next_actions
+constraints:
+  - "Priorize mitigação segura antes de correção definitiva."
+quality_bar:
+  - "Hipóteses priorizadas"
+  - "Pede evidências específicas"
+  - "Plano de mitigação"

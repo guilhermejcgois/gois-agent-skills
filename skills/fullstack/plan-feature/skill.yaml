@@ -1,0 +1,26 @@
+id: fullstack.plan-feature
+name: Plan Feature (Fullstack)
+version: 1.0.0
+category: fullstack
+tags: [planning, architecture, scope, mvp]
+objective: "Transformar uma ideia em plano de execução fullstack com etapas, riscos e entregáveis."
+inputs:
+  required:
+    - feature_goal
+    - constraints
+  optional:
+    - current_stack
+    - non_functional_requirements
+outputs:
+  - plan
+  - milestones
+  - risks
+constraints:
+  - "Não inventar requisitos não mencionados; liste suposições."
+quality_bar:
+  - "Plano em etapas pequenas e executáveis"
+  - "Lista riscos e mitigação"
+  - "Define o que é 'done'"
+examples:
+  input: "examples/input.md"
+  output: "examples/output.md"

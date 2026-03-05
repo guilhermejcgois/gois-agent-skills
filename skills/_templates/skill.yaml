@@ -1,0 +1,22 @@
+id: fullstack.example
+name: Example Skill
+version: 0.1.0
+category: fullstack
+tags: [example]
+objective: "Descreva em 1 frase o que essa skill resolve."
+inputs:
+  required:
+    - "o que precisa existir pra rodar"
+  optional:
+    - "o que ajuda mas não é obrigatório"
+outputs:
+  - "o que a skill entrega"
+constraints:
+  - "o que não fazer"
+tools:
+  - "web"
+quality_bar:
+  - "check de qualidade"
+examples:
+  input: "examples/input.md"
+  output: "examples/output.md"

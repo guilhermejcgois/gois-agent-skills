@@ -1,0 +1,22 @@
+id: fullstack.pr-review-fullstack
+name: PR Review (Fullstack)
+version: 1.0.0
+category: fullstack
+tags: [code-review, quality, security, performance]
+objective: "Revisar PR fullstack com checklist de qualidade, segurança, DX e testes."
+inputs:
+  required:
+    - pr_diff
+  optional:
+    - context
+    - standards
+outputs:
+  - review_comments
+  - risk_assessment
+  - suggested_tests
+constraints:
+  - "Evitar nitpick: foque no que muda comportamento, risco e manutenção."
+quality_bar:
+  - "Aponta riscos com severidade"
+  - "Sugere testes específicos"
+  - "Checa padrões de erro/observabilidade"

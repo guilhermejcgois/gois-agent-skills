@@ -1,0 +1,22 @@
+id: fullstack.db-migration-plan
+name: DB Migration Plan
+version: 1.0.0
+category: fullstack
+tags: [database, migration, postgres, safety]
+objective: "Planejar migrations seguras (up/down), rollout, backfill e estratégia de compatibilidade."
+inputs:
+  required:
+    - change_description
+  optional:
+    - db_engine
+    - deployment_model
+outputs:
+  - migration_steps
+  - rollout_plan
+  - rollback_plan
+constraints:
+  - "Não sugerir mudanças destrutivas sem plano de rollback."
+quality_bar:
+  - "Inclui compatibilidade (expand/contract)"
+  - "Considera backfill e locks"
+  - "Rollback plausível"
